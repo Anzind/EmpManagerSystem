@@ -37,6 +37,11 @@ EmpManager::EmpManager() {
 
 EmpManager::~EmpManager() {
 	if (this->empList != NULL) {
+		//±éÀú£¬delete
+		for (int i = 0;i < this->empNum;i++) {
+			delete this->empList[i];
+		}
+
 		delete[] this->empList;
 		this->empList = NULL;
 	}
